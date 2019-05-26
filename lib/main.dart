@@ -9,6 +9,7 @@ class WorldCupStats extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: HomePage(),
       theme: ThemeData(
+        fontFamily: 'Montserrat',
         primarySwatch: Colors.green,
       ),
       title: 'World Cup Stats',
@@ -17,7 +18,6 @@ class WorldCupStats extends StatelessWidget {
 }
 
 class HomePage extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,33 +42,27 @@ class HomePage extends StatelessWidget {
             ListTile(
               title: Text("Home"),
               trailing: Icon(Icons.home),
-              onTap: () => _onNavigationTap(context),
             ),
             ListTile(
               title: Text("Table"),
               trailing: Icon(Icons.format_list_numbered),
-              onTap: () => _onNavigationTap(context),
             ),
             ListTile(
               title: Text("Goals & Assists"),
               trailing: Icon(Icons.show_chart),
-              onTap: () => _onNavigationTap(context),
             ),
             ListTile(
               title: Text("Teams"),
               trailing: Icon(Icons.group),
-              onTap: () => _onNavigationTap(context),
             ),
             ListTile(
               title: Text("Players"),
               trailing: Icon(Icons.person),
-              onTap: () => _onNavigationTap(context),
             ),
             new Divider(),
             ListTile(
               title: Text("Settings"),
               trailing: Icon(Icons.settings),
-              onTap: () => _onNavigationTap(context),
             ),
           ],
           padding: const EdgeInsets.only(top: 0.0),
@@ -77,21 +71,4 @@ class HomePage extends StatelessWidget {
     );
   }
 
-  _onNavigationTap(BuildContext context) {
-    Navigator.of(context).pop();
-    showDialog<Null>(
-      context: context,
-      child: new AlertDialog(
-        title: const Text('Not Implemented'),
-        actions: <Widget>[
-          new FlatButton(
-            child: const Text('OK'),
-            onPressed: () {
-              Navigator.of(context).pop();
-            },
-          ),
-        ],
-      ),
-    );
-  }
 }

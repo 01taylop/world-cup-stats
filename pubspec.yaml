@@ -1,5 +1,6 @@
 name: world_cup_stats
 description: An app built using Flutter for web
+
 flutter:
   uses-material-design: true
 
