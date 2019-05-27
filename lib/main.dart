@@ -9,7 +9,14 @@ class WorldCupStats extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => HomePage(),
+        '/table': (context) => TablePage(),
+        '/teams': (context) => TeamsPage(),
+        '/players': (context) => PlayersPage(),
+        '/settings': (context) => SettingsPage(),
+      },
       theme: ThemeData(
         fontFamily: 'Montserrat',
         primarySwatch: Colors.green,
@@ -27,11 +34,11 @@ class DrawerOnly extends StatelessWidget {
     return Drawer(
       child: ListView(
         children: <Widget>[
-          new SizedBox(
+          SizedBox(
             height : 80.0,
-            child  : new DrawerHeader(
-              child  : new Text('World Cup Stats', style: TextStyle(color: Colors.white)),
-              decoration: new BoxDecoration(color: Colors.green),
+            child  : DrawerHeader(
+              child  : Text('World Cup Stats', style: TextStyle(color: Colors.white)),
+              decoration: BoxDecoration(color: Colors.green),
               margin : EdgeInsets.all(0.0),
               padding: EdgeInsets.all(0.0)
             ),
@@ -41,7 +48,7 @@ class DrawerOnly extends StatelessWidget {
             trailing: Icon(Icons.home),
             onTap: () {
               Navigator.pop(context);
-              Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()));
+              Navigator.pushNamed(context, '/');
             },
           ),
           ListTile(
@@ -49,34 +56,38 @@ class DrawerOnly extends StatelessWidget {
             trailing: Icon(Icons.format_list_numbered),
             onTap: () {
               Navigator.pop(context);
-              Navigator.push(context, MaterialPageRoute(builder: (context) => TablePage()));
-            },
-          ),
-          ListTile(
-            title: Text("Goals & Assists"),
-            trailing: Icon(Icons.show_chart),
-            onTap: () {
-              Navigator.pop(context);
-              Navigator.push(context, MaterialPageRoute(builder: (context) => GoalsAssistsPage()));
+              Navigator.pushNamed(context, '/table');
             },
           ),
           ListTile(
             title: Text("Teams"),
             trailing: Icon(Icons.group),
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.pushNamed(context, '/teams');
+            },
           ),
           ListTile(
             title: Text("Players"),
             trailing: Icon(Icons.person),
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.pushNamed(context, '/players');
+            },
           ),
-          new Divider(),
+          Divider(),
           ListTile(
             title: Text("Settings"),
             trailing: Icon(Icons.settings),
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.pushNamed(context, '/settings');
+            },
           ),
         ],
         padding: const EdgeInsets.only(top: 0.0),
       ),
-    );;
+    );
   }
 }
 
@@ -92,7 +103,7 @@ class HomePage extends StatelessWidget {
       drawer: DrawerOnly(),
       body: Center(
         child: Text("Welcome"),
-      )
+      ),
     );
   }
 
@@ -115,18 +126,52 @@ class TablePage extends StatelessWidget {
   }
 }
 
-class GoalsAssistsPage extends StatelessWidget {
-  const GoalsAssistsPage({Key key}) : super(key: key);
+class TeamsPage extends StatelessWidget {
+  const TeamsPage({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Goals & Assists"),
+        title: Text("Teams"),
       ),
       drawer: DrawerOnly(),
       body: Center(
-        child: Text("Goals & Assists"),
+        child: Text("Teams"),
+      ),
+    );
+  }
+}
+
+class PlayersPage extends StatelessWidget {
+  const PlayersPage({Key key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Players"),
+      ),
+      drawer: DrawerOnly(),
+      body: Center(
+        child: Text("Players"),
+      ),
+    );
+  }
+}
+
+class SettingsPage extends StatelessWidget {
+  const SettingsPage({Key key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Settings"),
+      ),
+      drawer: DrawerOnly(),
+      body: Center(
+        child: Text("Settings"),
       ),
     );
   }
