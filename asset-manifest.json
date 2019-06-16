@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/world-cup-stats/static/css/main.34de6062.chunk.css",
+    "main.js": "/world-cup-stats/static/js/main.bafa9f26.chunk.js",
+    "main.js.map": "/world-cup-stats/static/js/main.bafa9f26.chunk.js.map",
+    "runtime~main.js": "/world-cup-stats/static/js/runtime~main.5163323f.js",
+    "runtime~main.js.map": "/world-cup-stats/static/js/runtime~main.5163323f.js.map",
+    "static/js/2.3310f33a.chunk.js": "/world-cup-stats/static/js/2.3310f33a.chunk.js",
+    "static/js/2.3310f33a.chunk.js.map": "/world-cup-stats/static/js/2.3310f33a.chunk.js.map",
+    "index.html": "/world-cup-stats/index.html",
+    "precache-manifest.9fa43c0f12bf3eff821ddd6ce2774341.js": "/world-cup-stats/precache-manifest.9fa43c0f12bf3eff821ddd6ce2774341.js",
+    "service-worker.js": "/world-cup-stats/service-worker.js",
+    "static/css/main.34de6062.chunk.css.map": "/world-cup-stats/static/css/main.34de6062.chunk.css.map"
+  }
+}
