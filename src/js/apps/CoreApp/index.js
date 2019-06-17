@@ -1,7 +1,13 @@
 import React from 'react'
+import MenuIcon from '@material-ui/icons/Menu'
 
 function App() {
-  return <p>This is my app</p>
+  return (
+    <div class='main'>
+      <MenuIcon/>
+      <p>This is my app</p>
+    </div>
+  )
 }
 
 export default App
