@@ -1,13 +1,26 @@
 import React from 'react'
-import MenuIcon from '@material-ui/icons/Menu'
 
-function App() {
-  return (
-    <div class='main'>
-      <MenuIcon/>
-      <p>This is my app</p>
-    </div>
-  )
+import AppBar from '../../components/AppBar'
+
+export default class App extends React.Component {
+
+  state = {
+    isMenuOpen: false,
+  }
+
+  toggleMenu = () => {
+    this.setState(prevState => ({
+      isMenuOpen: !prevState.isMenuOpen,
+    }))
+  }
+
+  render() {
+    return (
+      <>
+        <AppBar title='Hello' onToggleMenu={this.toggleMenu}/>
+        <p>This is my app</p>
+        <p>isMenuOpen: {this.state.isMenuOpen ? 'true' : 'false'}</p>
+      </>
+    )
+  }
 }
-
-export default App

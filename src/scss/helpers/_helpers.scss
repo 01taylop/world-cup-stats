@@ -34,10 +34,13 @@
 .text {
   // Colours
   &-primary {
-    color: get-colour(primary) !important;
+    color: get-colour('primary') !important;
   }
   &-secondary {
-    color: get-colour(secondary) !important;
+    color: get-colour('secondary') !important;
+  }
+  &-tertiary {
+    color: get-colour('tertiary') !important;
   }
   // Transform
   &-capitalised {

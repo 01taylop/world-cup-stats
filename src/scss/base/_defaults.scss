@@ -1,11 +1,12 @@
 //
-// Defaults
-// --------------------------------------------------
-
-$asset-path: '../assets' !default;
-
 // Layout
 // --------------------------------------------------
+
+$breakpoints: (
+  'small': 480px,
+  'medium': 768px,
+  'large': 1200px
+) !default;
 
 $container-padding: 15px !default;
 $grid-columns: 12 !default;
@@ -22,19 +23,22 @@ $spacing-xl: 40px !default;
 // --------------------------------------------------
 
 $colours: (
-  'primary': #5bdfb8,
-  'secondary': #009,
-  'background': #f8f8f8,
+  'primary': #002776,
+  'secondary': #009B3A,
+  'tertiary': #FEDF00,
 
   'success': #43b02a,
   'info': #00b1ff,
   'warning': #ffa300,
   'danger': #e4002b,
 
-  'text': #000,
+  'text': #3B454E,
   'link': #00b1ff,
 
+  'background': #f5f5f5,
   'border': #c0c0c0,
+
+  'white': #ffffff,
 ) !default;
 
 @function get-colour($key) {

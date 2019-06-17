@@ -3,12 +3,6 @@
 // https://css-tricks.com/approaches-media-queries-sass/
 // --------------------------------------------------
 
-$breakpoints: (
-  'small': 480px,
-  'medium': 768px,
-  'large': 1200px
-) !default;
-
 $media-expressions: (
   'screen': 'screen',
   'print': 'print',

@@ -10,16 +10,13 @@
 @import 'mixins/_sass-helpers';
 @import 'mixins/_z-index';
 
-// Typography
-
 // Helpers
 @import 'helpers/_helpers';
 @import 'helpers/_spacing';
 
-// Base Main
+// Base
 @import 'base/_main';
 @import 'base/_responsive';
 
-// Base Secondary
-
 // Components
+@import 'components/_appbar';

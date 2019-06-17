@@ -1,10 +1,9 @@
-//
-// All Mixins
-// --------------------------------------------------
-
-@mixin aspect-ratio-height($display-height, $height, $width) {
-  width: (($display-height / $height) * $width) + px;
-  height: $display-height + px;
+@mixin button-basic {
+  border: 0;
+  background: none;
+  line-height: 1;
+  cursor: pointer;
+  vertical-align: middle;
 }
 
 @mixin center-block {
@@ -33,6 +32,10 @@
 
   font-size: $value + px;
   font-size: ($value / 16) + rem;
+}
+
+@mixin font-weight-bold {
+  font-weight: bold;
 }
 
 @mixin opacity($opacity) {
