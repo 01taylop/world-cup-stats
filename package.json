@@ -1,12 +1,6 @@
 {
   "name": "world-cup-stats",
   "version": "0.0.1",
-  "private": true,
-  "dependencies": {
-    "react": "16.8.6",
-    "react-dom": "16.8.6",
-    "react-scripts": "3.0.1"
-  },
   "scripts": {
     "build": "react-scripts build",
     "start": "react-scripts start",
@@ -14,6 +8,14 @@
   },
   "eslintConfig": {
     "extends": "react-app"
+  },
+  "dependencies": {
+    "react": "16.8.6",
+    "react-dom": "16.8.6",
+    "react-scripts": "3.0.1"
+  },
+  "devDependencies": {
+    "node-sass": "4.12.0"
   },
   "browserslist": {
     "production": [

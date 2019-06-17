@@ -1,9 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import './scss/index.scss'
 
-ReactDOM.render(<App />, document.getElementById('root'));
+// React
+import React from 'react'
+import { render } from 'react-dom'
 
-serviceWorker.unregister();
+import App from './js/apps/CoreApp/index.js'
+import * as serviceWorker from './serviceWorker'
+
+render(<App />, document.getElementById('root'))
+
+serviceWorker.unregister()
