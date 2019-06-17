@@ -1,0 +1,21 @@
+//
+// Z-Index Helper
+// --------------------------------------------------
+
+$indexes: (
+  basic: 1,
+  negative: -1,
+);
+
+@function get-z-index($key) {
+  @if map-has-key($indexes, $key) {
+    @return map-get($indexes, $key);
+  }
+  @warn 'The key `#{$key}` is not in the map "$indexes"';
+  @return null;
+}
+
+@mixin z-index($key: 'basic') {
+  // sass-lint:disable no-disallowed-properties
+  z-index: get-z-index($key);
+}

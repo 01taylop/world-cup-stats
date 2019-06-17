@@ -1,6 +1,25 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+// Vendor
+@import 'vendor/_reset';
+
+// Defaults
+@import 'base/_defaults';
+
+// Mixins
+@import 'mixins/_all';
+@import 'mixins/_media-queries';
+@import 'mixins/_sass-helpers';
+@import 'mixins/_z-index';
+
+// Typography
+
+// Helpers
+@import 'helpers/_helpers';
+@import 'helpers/_spacing';
+
+// Base Main
+@import 'base/_main';
+@import 'base/_responsive';
+
+// Base Secondary
+
+// Components

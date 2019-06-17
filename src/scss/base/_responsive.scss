@@ -1,0 +1,85 @@
+//
+// Responsive - Grid, Row, Col
+// --------------------------------------------------
+
+.container {
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: $container-padding;
+  padding-left: $container-padding;
+  &::before, &::after {
+    @include clearfix;
+  }
+}
+
+.row {
+  margin-right: -$container-padding;
+  margin-left: -$container-padding;
+  &::before, &::after {
+    @include clearfix;
+  }
+}
+
+.col {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: $container-padding;
+  padding-left: $container-padding;
+  float: left;
+}
+
+// The order is important here which is why this may look overcomplicated
+// The classes must be created with the smallest first so that the smallest class
+// is the 'default', i.e. col-xs-12 will be applied to all devices sizes
+// but col-sm-6, col-md-3 and col-lg-1 would subsequently override each other.
+@each $size, $size-media-name in (xs: false, sm: 'small', md: 'medium', lg: 'large') {
+  @for $i from 1 through $grid-columns {
+    $column-width: ((100 / $grid-columns) * $i) * 1%;
+    .col-#{$size}-#{$i} {
+      @if $size-media-name {
+        @include media('screen', '>=' + $size-media-name) {
+          width: $column-width;
+        }
+      } @else {
+        width: $column-width;
+      }
+    }
+    .#{$size}-offset-#{$i} {
+      @if $size-media-name {
+        @include media('screen', '>=' + $size-media-name) {
+          margin-left: $column-width;
+        }
+      } @else {
+        margin-left: $column-width;
+      }
+    }
+  }
+}
+
+// Responsive Helpers
+// --------------------------------------------------
+
+.hidden {
+  &-xs {
+    @include media('screen', '<small') {
+      display: none !important;
+    }
+  }
+  &-sm {
+    @include media('screen', '>=small', '<medium') {
+      display: none !important;
+    }
+  }
+  &-md {
+    @include media('screen', '>=medium', '<large') {
+      display: none !important;
+    }
+  }
+  &-lg {
+    @include media('screen', '>=large') {
+      display: none !important;
+    }
+  }
+}
