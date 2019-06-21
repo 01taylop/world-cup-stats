@@ -4,12 +4,14 @@
   line-height: 1;
   cursor: pointer;
   vertical-align: middle;
-}
-
-@mixin center-block {
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+  &:active {
+    outline: none;
+    background-image: none;
+  }
 }
 
 @mixin clearfix {
@@ -32,10 +34,6 @@
 
   font-size: $value + px;
   font-size: ($value / 16) + rem;
-}
-
-@mixin font-weight-bold {
-  font-weight: bold;
 }
 
 @mixin opacity($opacity) {

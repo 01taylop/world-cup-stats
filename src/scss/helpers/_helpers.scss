@@ -1,19 +1,7 @@
-//
-// Misc Helpers
-// --------------------------------------------------
-
 .clearfix {
   &::after {
     @include clearfix;
   }
-}
-
-.pull-left {
-  float: left !important;
-}
-
-.pull-right {
-  float: right !important;
 }
 
 .visually-hidden {
@@ -26,47 +14,4 @@
   white-space: nowrap;
   overflow: hidden;
   clip: rect(0 0 0 0);
-}
-
-// Text Helpers
-// --------------------------------------------------
-
-.text {
-  // Colours
-  &-primary {
-    color: get-colour('primary') !important;
-  }
-  &-secondary {
-    color: get-colour('secondary') !important;
-  }
-  &-tertiary {
-    color: get-colour('tertiary') !important;
-  }
-  // Transform
-  &-capitalised {
-    text-transform: capitalize !important;
-  }
-  &-lowercase {
-    text-transform: lowercase !important;
-  }
-  &-uppercase {
-    text-transform: uppercase !important;
-  }
-  // Align
-  &-left {
-    text-align: left !important;
-  }
-  &-center {
-    text-align: center !important;
-  }
-  &-right {
-    text-align: right !important;
-  }
-  // Misc
-  &-ellipsis {
-    @include ellipsis;
-  }
-  &-underline {
-    text-decoration: underline !important;
-  }
 }

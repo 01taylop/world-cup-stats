@@ -1,8 +1,36 @@
 .appbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: $appbar-height + 1px;
   background-color: get-colour('primary');
   color: get-colour('white');
 
   button {
     @include button-basic;
+    @include font-size-rem(16);
+
+    width: $appbar-height;
+    height: $appbar-height;
+    padding: 0;
+    color: get-colour('white');
+    &:hover {
+      background-color: mix(get-colour('primary'), get-colour('white'), 90%);
+      color: get-colour('white');
+    }
+
+    @include media('screen', '>=medium') {
+      display: none;
+    }
+  }
+
+  h1 {
+    @include font-size-rem(24);
+
+    display: inline-block;
+    height: 100%;
+    margin: 0 30px 0 10px;
+    line-height: $appbar-height;
+    vertical-align: top;
   }
 }
