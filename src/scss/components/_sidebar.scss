@@ -25,4 +25,27 @@ $sidebar-animation: .2s ease;
     margin-top: $appbar-height;
     left: 0;
   }
+
+  a {
+    @include font-size-rem(16);
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: get-colour('text');
+
+    &:hover {
+      background-color: darken(get-colour('background'), 5%);
+    }
+    svg {
+      position: relative;
+      top: -1px;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+  }
+
+  hr {
+    margin: 10px 0;
+    background-color: darken(get-colour('background'), 15%);
+  }
 }
