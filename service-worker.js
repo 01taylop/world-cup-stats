@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/world-cup-stats/precache-manifest.9fa43c0f12bf3eff821ddd6ce2774341.js"
+  "/world-cup-stats/precache-manifest.accdb79beb8abf72674d10d1b37178b7.js"
 );
 
 self.addEventListener('message', (event) => {
