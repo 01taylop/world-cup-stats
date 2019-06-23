@@ -1,0 +1,28 @@
+$sidebar-animation: .2s ease;
+
+.sidebar {
+  @include overflow-scroll(y);
+  @include z-index(sidebar);
+
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: -$sidebar-width;
+  width: $sidebar-width;
+  padding: 10px 0;
+  background-color: get-colour('background');
+  overflow-x: visible;
+
+  &.open {
+    left: 0;
+  }
+
+  @include media('screen', '<=small') {
+    transition: left $sidebar-animation;
+  }
+
+  @include media('screen', '>=medium') {
+    margin-top: $appbar-height;
+    left: 0;
+  }
+}

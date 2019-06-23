@@ -44,6 +44,19 @@
   zoom: 1;
 }
 
+@mixin overflow-scroll($direction: 'z') {
+  @if $direction == 'x' {
+    overflow-x: auto;
+    overflow-y: hidden;
+  } @else if $direction == 'y' {
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  } @else {
+    overflow: auto;
+  }
+}
+
 @mixin pseudo($display: block, $position: absolute, $content: '') {
   display: $display;
   position: $position;

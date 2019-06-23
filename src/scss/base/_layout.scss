@@ -1,0 +1,9 @@
+.content {
+  width: 100vw;
+  min-width: 320px;
+  max-width: 100%;
+  padding: ($appbar-height + $container-padding) $container-padding $container-padding;
+  @include media('screen', '>=medium') {
+    padding-left: $sidebar-width + $container-padding;
+  }
+}

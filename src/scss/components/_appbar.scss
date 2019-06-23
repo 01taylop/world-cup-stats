@@ -2,7 +2,8 @@
   position: fixed;
   top: 0;
   width: 100%;
-  height: $appbar-height + 1px;
+  height: $appbar-height;
+  min-width: 320px;
   background-color: get-colour('primary');
   color: get-colour('white');
 
@@ -25,12 +26,11 @@
   }
 
   h1 {
-    @include font-size-rem(24);
+    @include font-size-rem(22);
 
     display: inline-block;
-    height: 100%;
-    margin: 0 30px 0 10px;
+    margin: 0 10px;
     line-height: $appbar-height;
-    vertical-align: top;
+    vertical-align: middle;
   }
 }
