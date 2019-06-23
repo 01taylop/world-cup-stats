@@ -17,7 +17,7 @@ export default class App extends React.Component {
   render() {
     return (
       <>
-        <AppBar title='Hello' onToggleMenu={this.toggleMenu}/>
+        <AppBar title='World Cup Stats' onToggleMenu={this.toggleMenu}/>
         <p>This is my app</p>
         <p>isMenuOpen: {this.state.isMenuOpen ? 'true' : 'false'}</p>
       </>

@@ -56,6 +56,11 @@ hr {
   background: get-colour('border');
 }
 
+.content {
+  margin-top: $appbar-height;
+  padding: $container-padding;
+}
+
 ::selection {
   background: get-colour('secondary');
   color: get-colour('primary');
