@@ -4,9 +4,12 @@ import './scss/index.scss'
 import React from 'react'
 import { render } from 'react-dom'
 
+// Routing
+import { BrowserRouter as Router } from 'react-router-dom'
+
 import App from './js/apps/CoreApp/index.js'
 import * as serviceWorker from './serviceWorker'
 
-render(<App />, document.getElementById('root'))
+render(<Router><App/></Router>, document.getElementById('root'))
 
 serviceWorker.unregister()
